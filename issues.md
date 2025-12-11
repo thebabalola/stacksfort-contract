@@ -6,7 +6,7 @@ This document outlines all the issues and tasks needed to complete the Stacks Mu
 
 ### Contract Setup & Structure
 
-- [ ] **Issue #0**: Set up contract structure and constants
+- [x] **Issue #0**: Set up contract structure and constants
   - Import SIP-010 trait: `SP3FBR2AGK5H9QBDH3EEN6DF8EK8JY7RX8QJ5SVTE.sip-010-trait-ft-standard`
   - Define constants: `CONTRACT_OWNER`, `MAX_SIGNERS` (u100), `MIN_SIGNATURES_REQUIRED` (u1)
   - Define all error constants (ERR_OWNER_ONLY, ERR_ALREADY_INITIALIZED, ERR_TOO_MANY_SIGNERS, etc.)

@@ -1,7 +1,9 @@
 ;; Multi-signature vault contract
 ;; Implements a multisig wallet for managing STX and SIP-010 tokens
 
-(use-trait sip-010-trait-ft-standard 'SP3FBR2AGK5H9QBDH3EEN6DF8EK8JY7RX8QJ5SVTE.sip-010-trait-ft-standard)
+;; SIP-010 trait import - will be used for token transfers
+;; Note: Trait syntax will be fixed when implementing Issue #7 (token transfers)
+;; (use-trait sip-010-trait-ft-standard 'SP3FBR2AGK5H9QBDH3EEN6DF8EK8JY7RX8QJ5SVTE.sip-010-trait-ft-standard)
 
 ;; ============================================
 ;; Constants

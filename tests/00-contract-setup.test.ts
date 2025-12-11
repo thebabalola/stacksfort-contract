@@ -29,25 +29,27 @@ describe("Issue #0: Contract Setup & Structure", () => {
   });
 
   describe("Maps Definition", () => {
-    it("should have 'transactions' map defined and return none for non-existent key", () => {
-      const transaction = simnet.getMapEntry(
-        "multisig",
-        "transactions",
-        Cl.uint(0)
-      );
-      expect(transaction).toBeNone();
+    it("should have 'transactions' map defined", () => {
+      // Attempting to read from a non-existent key throws "value not found"
+      // This confirms the map is defined (otherwise it would be a different error)
+      expect(() => {
+        simnet.getMapEntry("multisig", "transactions", Cl.uint(0));
+      }).toThrow("value not found");
     });
 
-    it("should have 'txn-signers' map defined and return none for non-existent key", () => {
-      const txnSigner = simnet.getMapEntry(
-        "multisig",
-        "txn-signers",
-        Cl.tuple({
-          "txn-id": Cl.uint(0),
-          signer: Cl.principal(deployer),
-        })
-      );
-      expect(txnSigner).toBeNone();
+    it("should have 'txn-signers' map defined", () => {
+      // Attempting to read from a non-existent key throws "value not found"
+      // This confirms the map is defined (otherwise it would be a different error)
+      expect(() => {
+        simnet.getMapEntry(
+          "multisig",
+          "txn-signers",
+          Cl.tuple({
+            "txn-id": Cl.uint(0),
+            signer: Cl.principal(deployer),
+          })
+        );
+      }).toThrow("value not found");
     });
   });
 });

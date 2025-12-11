@@ -49,3 +49,8 @@
   }
 )
 
+(define-map txn-signers
+  (tuple (txn-id uint) (signer principal))
+  bool
+)
+
